@@ -12,27 +12,13 @@
     <!--nav title-->
     <div class="heardCenterTitle" v-if="settings.showTitle">{{ settings.showTitle }}</div>
     <div class="right-menu" v-if="settings.ShowDropDown">
-      <el-dropdown trigger="click" size="medium">
+      <el-dropdown trigger="hover" size="medium">
         <div class="avatar-wrapper">
-          <img
-            src="https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif?imageView2/1/w/80/h/80"
-            class="user-avatar"
-          />
-          <CaretBottom style="width: 1em; height: 1em; margin-left: 4px" />
+          <img src="@/assets/avatar.png" class="user-avatar" />
         </div>
         <template #dropdown>
           <el-dropdown-menu>
-            <router-link to="/">
-              <el-dropdown-item>Home</el-dropdown-item>
-            </router-link>
-            <a target="_blank" href="https://github.com/jzfai/vue3-admin-template">
-              <el-dropdown-item>Github</el-dropdown-item>
-            </a>
-            <a target="_blank" href="https://github.com/jzfai/vue3-admin-template">
-              <el-dropdown-item>Docs</el-dropdown-item>
-            </a>
-            <!--<el-dropdown-item>修改密码</el-dropdown-item>-->
-            <el-dropdown-item divided @click="loginOut">login out</el-dropdown-item>
+            <el-dropdown-item divided @click="loginOut">退出</el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
@@ -41,7 +27,6 @@
 </template>
 
 <script setup lang="ts">
-import { CaretBottom } from '@element-plus/icons'
 import Breadcrumb from './Breadcrumb'
 import Hamburger from './Hamburger'
 import { computed, getCurrentInstance } from 'vue'
@@ -90,7 +75,7 @@ const loginOut = () => {
     cursor: pointer;
     width: 40px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 50%;
   }
 
   .el-icon-caret-bottom {

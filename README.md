@@ -143,3 +143,4 @@ Modern browsers and Internet Explorer 11+.
 
 Copyright (c) 2021-present  kuanghua
 
+VITE_APP_BASE_URL = 'http://8.135.1.141/micro-service-api'

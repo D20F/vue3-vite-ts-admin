@@ -9,6 +9,25 @@ import getPageTitle from '@/utils/getPageTitle'
 import { RouterRowTy } from '@/types/router'
 
 const whiteList = ['/login'] // no redirect whitelist
+
+
+// function filterAsyncRouter(routes) {
+//     return routes.filter(route => {
+//         const component = route.component;
+//         if (component) {
+//             if (route.component === 'Layout') {
+//                 route.component = Layout;
+//             } else {
+//                 route.component = resolve => require([`@/views/${component}`], resolve);
+//             }
+//             if (route.children && route.children.length) {
+//                 route.children = filterAsyncRouter(route.children);
+//             }
+//             return true;
+//         }
+//     });
+// }
+
 router.beforeEach(async (to: any, from, next: any) => {
     // start progress bar
     if (settings.isNeedNprogress) NProgress.start()
@@ -42,7 +61,9 @@ router.beforeEach(async (to: any, from, next: any) => {
                         store.commit('permission/M_routes', accessRoutes)
                     }
 
-                    console.log(accessRoutes)
+                    // console.log(to)
+                    // console.log(from)
+                    // console.log(accessRoutes)
 
                     // dynamically add accessible routes
                     //router4 addRoutes destroyed

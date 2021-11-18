@@ -45,10 +45,10 @@ const variables = computed(() => {
     menuText: '#bfcbd9',
     menuActiveText: '#409EFF',
     subMenuActiveText: '#f4f4f5',
-    menuBg: '#304156',
-    menuHover: '#263445',
-    subMenuBg: '#1f2d3d',
-    subMenuHover: '#001528',
+    menuBg: '#001321',
+    menuHover: '#b5bbc0',
+    subMenuBg: '#000A13',
+    subMenuHover: '#1890ff',
     sideBarWidth: '210px'
   }
 })
